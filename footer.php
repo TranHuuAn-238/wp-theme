@@ -68,17 +68,7 @@
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
-    <script src="<?= $theme_uri; ?>/js/jquery-3.3.1.min.js"></script>
-    <script src="<?= $theme_uri; ?>/js/bootstrap.min.js"></script>
-    <script src="<?= $theme_uri; ?>/js/jquery.nice-select.min.js"></script>
-    <script src="<?= $theme_uri; ?>/js/jquery-ui.min.js"></script>
-    <script src="<?= $theme_uri; ?>/js/jquery.slicknav.js"></script>
-    <script src="<?= $theme_uri; ?>/js/mixitup.min.js"></script>
-    <script src="<?= $theme_uri; ?>/js/owl.carousel.min.js"></script>
-    <script src="<?= $theme_uri; ?>/js/main.js"></script>
-
-
-
+    <?php wp_footer(); ?>
 </body>
 
 </html>
