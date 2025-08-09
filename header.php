@@ -47,7 +47,17 @@
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
-            <ul>
+        <?php
+            wp_nav_menu([
+                'theme_location'    => 'mobile',
+                'menu_class'        => 'mobile-menu-wrapper',
+                'container_class'   => 'header__menu',
+                'container'         => true,
+                'items_wrap'        => '<ul class="%2$s" id="mobile-menu-ul">%3$s</ul>',
+                'fallback_cb'       => false
+            ]);
+        ?>
+            <!-- <ul>
                 <li class="active"><a href="./index.html">Home</a></li>
                 <li><a href="./shop-grid.html">Shop</a></li>
                 <li><a href="#">Pages</a>
@@ -60,7 +70,7 @@
                 </li>
                 <li><a href="./blog.html">Blog</a></li>
                 <li><a href="./contact.html">Contact</a></li>
-            </ul>
+            </ul> -->
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="header__top__right__social">

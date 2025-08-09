@@ -5,6 +5,20 @@ $theme_uri      = get_template_directory_uri() . '/assets';
 $theme_version  = '1.0';
 
 // Đăng ký các thành phần hỗ trợ cho theme
+add_action('after_setup_theme', 'wp2025_theme_support');
+function wp2025_theme_support() {
+    // Đăng ký menu
+    register_nav_menus([
+        'primary' => 'Primary Menu',
+        'vertical' => 'Vertical Menu',
+        'mobile' => 'Mobile Menu',
+    ]);
+
+    // Đăng ký hình ảnh cho bài viết
+
+    // ...
+}
+
 // Đăng ký style cho theme
 // wp_enqueue_scripts
 add_action('wp_enqueue_scripts', 'wp2025_theme_register_styles');
