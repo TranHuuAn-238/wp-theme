@@ -21,3 +21,7 @@
 .blog__sidebar {
     padding-top: 0;
 }
+.post-term, .post-term:hover {
+    color: #6f6f6f;
+    margin-right: 5px;
+}
