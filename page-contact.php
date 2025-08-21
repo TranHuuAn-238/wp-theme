@@ -5,6 +5,14 @@ Template Name: Trang liên hệ
 ?>
 
 <?php global $theme_uri; ?>
+
+<?php
+    $contact_phone = get_theme_mod('contact_phone');
+    $contact_email = get_theme_mod('contact_email');
+    $contact_open_time = get_theme_mod('contact_open_time');
+    $contact_address = get_theme_mod('contact_address');
+?>
+
 <?php get_header(); ?>
     <?php while (have_posts()) : the_post(); ?>
     <?php get_template_part('template-parts/page/breadcrumb'); ?>
@@ -17,28 +25,28 @@ Template Name: Trang liên hệ
                     <div class="contact__widget">
                         <span class="icon_phone"></span>
                         <h4>Phone</h4>
-                        <p>+01-3-8888-6868</p>
+                        <p><?= $contact_phone; ?></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
                     <div class="contact__widget">
                         <span class="icon_pin_alt"></span>
                         <h4>Address</h4>
-                        <p>60-49 Road 11378 New York</p>
+                        <p><?= $contact_address; ?></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
                     <div class="contact__widget">
                         <span class="icon_clock_alt"></span>
                         <h4>Open time</h4>
-                        <p>10:00 am to 23:00 pm</p>
+                        <p><?= $contact_open_time; ?></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">
                     <div class="contact__widget">
                         <span class="icon_mail_alt"></span>
                         <h4>Email</h4>
-                        <p>hello@colorlib.com</p>
+                        <p><?= $contact_email; ?></p>
                     </div>
                 </div>
             </div>

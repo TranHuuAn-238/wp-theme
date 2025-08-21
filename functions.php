@@ -13,3 +13,6 @@ include_once $theme_dir . '/inc/scripts.php';
 
 // Đăng ký sidebar, widgets
 include_once $theme_dir . '/inc/widgets.php';
+
+// Đăng ký customizer
+include_once $theme_dir . '/inc/customizers.php';
