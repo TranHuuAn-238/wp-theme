@@ -17,6 +17,40 @@ function wp2025_register_widgets() {
 		)
 	);
 
+	register_sidebar(
+		array(
+			'id'            => 'footer-1',
+			'name'          => __( 'Footer 1 Sidebar', 'wp2025-theme' ),
+			'description'   => __( 'A short description of the sidebar.', 'wp2025-theme' ),
+			'before_widget' => '<div class="footer__widget">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h6 class="widget-footer-title">',
+			'after_title'   => '</h6>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'            => 'footer-2',
+			'name'          => __( 'Footer 2 Sidebar', 'wp2025-theme' ),
+			'description'   => __( 'A short description of the sidebar.', 'wp2025-theme' ),
+			'before_widget' => '<div class="footer__widget">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h6 class="widget-footer-title">',
+			'after_title'   => '</h6>',
+		)
+	);
+	register_sidebar(
+		array(
+			'id'            => 'footer-3',
+			'name'          => __( 'Footer 3 Sidebar', 'wp2025-theme' ),
+			'description'   => __( 'A short description of the sidebar.', 'wp2025-theme' ),
+			'before_widget' => '<div class="footer__widget">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h6 class="widget-footer-title">',
+			'after_title'   => '</h6>',
+		)
+	);
+
 	register_widget( 'WP2025_Recent_News' );
 	register_widget( 'WP2025_Tags' );
 }

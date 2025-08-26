@@ -11,5 +11,9 @@ function wp2025_theme_support() {
     // Đăng ký hình ảnh cho bài viết
     add_theme_support('post-thumbnails');
     add_theme_support('post-formats');
+    add_theme_support( 'custom-logo', [
+        'height'               => 50,
+		'width'                => 119,
+    ] );
     // ...
 }
