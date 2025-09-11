@@ -19,3 +19,6 @@ include_once $theme_dir . '/inc/customizers.php';
 
 // Đăng ký shortcodes
 include_once $theme_dir . '/inc/shortcodes.php';
+
+// Đăng ký chức năng tìm kiếm, sắp xếp cho product
+include_once $theme_dir . '/ecommerce/inc/search.php';
