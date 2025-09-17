@@ -22,3 +22,9 @@ include_once $theme_dir . '/inc/shortcodes.php';
 
 // Đăng ký chức năng tìm kiếm, sắp xếp cho product
 include_once $theme_dir . '/ecommerce/inc/search.php';
+
+// Lớp xử lý cart
+include_once $theme_dir . '/ecommerce/inc/WP_Cart.php';
+
+// Đăng ký ajaxs
+include_once $theme_dir . '/ecommerce/inc/ajaxs.php';

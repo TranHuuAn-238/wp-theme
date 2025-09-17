@@ -22,11 +22,12 @@ $number_comments = get_comments_number($post->ID);
     <div class="product__details__quantity">
         <div class="quantity">
             <div class="pro-qty">
-                <input type="text" value="1">
+                <input type="text" id="product_qty" value="1">
             </div>
         </div>
     </div>
-    <a href="#" class="primary-btn">ADD TO CARD</a>
+    <input type="hidden" id="product_id" value="<?= $post->ID; ?>">
+    <a href="javascript:;" id="add_to_cart" class="primary-btn">ADD TO CARD</a>
     <ul>
         <li><b>Tồn kho</b> <span><?= $stock; ?></span></li>
         <li><b>Danh mục</b> <span></span></li>
