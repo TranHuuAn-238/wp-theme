@@ -2,6 +2,33 @@
 add_action("wp_ajax_wp2025_add_to_cart", "wp2025_add_to_cart");
 add_action("wp_ajax_nopriv_wp2025_add_to_cart", "wp2025_add_to_cart");
 
+add_action("wp_ajax_wp2025_update_cart", "wp2025_update_cart");
+add_action("wp_ajax_nopriv_wp2025_update_cart", "wp2025_update_cart");
+
+add_action("wp_ajax_wp2025_get_cart", "wp2025_get_cart");
+add_action("wp_ajax_nopriv_wp2025_get_cart", "wp2025_get_cart");
+
+function wp2025_get_cart() {
+    global $cart;
+    $return = [
+        'success' => true,
+        'fragments' => $cart->getFragments()
+    ];
+    echo wp_json_encode($return);
+    die();
+}
+
+function wp2025_update_cart() {
+    global $cart;
+    $cart->updateCart($_REQUEST['qty']);
+    $return = [
+        'success' => true,
+        'fragments' => $cart->getFragments()
+    ];
+    echo wp_json_encode($return);
+    die();
+}
+
 function wp2025_add_to_cart() {
 
     $nonce = $_REQUEST['nonce'];

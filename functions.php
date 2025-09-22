@@ -28,3 +28,5 @@ include_once $theme_dir . '/ecommerce/inc/WP_Cart.php';
 
 // Đăng ký ajaxs
 include_once $theme_dir . '/ecommerce/inc/ajaxs.php';
+
+include_once $theme_dir . '/ecommerce/inc/shortcodes.php';
