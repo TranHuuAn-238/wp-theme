@@ -8,6 +8,20 @@ add_action("wp_ajax_nopriv_wp2025_update_cart", "wp2025_update_cart");
 add_action("wp_ajax_wp2025_get_cart", "wp2025_get_cart");
 add_action("wp_ajax_nopriv_wp2025_get_cart", "wp2025_get_cart");
 
+add_action("wp_ajax_wp2025_delete_cart", "wp2025_delete_cart");
+add_action("wp_ajax_nopriv_wp2025_delete_cart", "wp2025_delete_cart");
+
+function wp2025_delete_cart() {
+    global $cart;
+    $id = $_REQUEST['id'];
+    $cart->removeProductFromCart($id);
+    $return = [
+        'success' => true
+    ];
+    echo wp_json_encode($return);
+    die();
+}
+
 function wp2025_get_cart() {
     global $cart;
     $return = [

@@ -1,5 +1,4 @@
 console.log(custom_js_object);
-
 get_cart();
 
 function initInputQty() {
@@ -23,6 +22,21 @@ function initInputQty() {
     });
 }
 
+function delete_cart(id) {
+    let options = {
+        url: custom_js_object.ajaxurl + '?action=wp2025_delete_cart',
+        method: 'POST',
+        dataType: 'json',
+        data: {
+            id: id
+        },
+        success: function(res) {
+            get_cart();
+        }
+    }
+    jQuery.ajax(options);
+}
+
 function get_cart() {
     let options = {
         url: custom_js_object.ajaxurl + '?action=wp2025_get_cart',
@@ -44,7 +58,7 @@ function update_cart() {
         dataType: 'json',
         data: jQuery('#form-cart').serialize(),
         success: function(res) {
-            initInputQty();
+            get_cart();
         }
     }
     jQuery.ajax(options);
@@ -77,5 +91,10 @@ jQuery(document).ready(function() {
 
     jQuery('#add_to_cart').click(function() {
         add_to_cart();
+    });
+
+    jQuery('body').on('click', '.delete_cart', function() {
+        let id = jQuery(this).data('id');
+        delete_cart(id);
     });
 });

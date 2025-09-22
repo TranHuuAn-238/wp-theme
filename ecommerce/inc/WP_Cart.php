@@ -84,7 +84,7 @@ class WP_Cart {
                     <?= number_format($sub_total); ?>
                 </td>
                 <td class="shoping__cart__item__close">
-                    <span class="icon_close"></span>
+                    <span data-id="<?= $post_id; ?>" class="icon_close delete_cart"></span>
                 </td>
             </tr>
             <?php endforeach; ?>
